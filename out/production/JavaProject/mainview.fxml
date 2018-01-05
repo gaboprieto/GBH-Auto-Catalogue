@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="299.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainViewController">
+   <children>
+      <Label layoutX="189.0" layoutY="6.0" prefHeight="40.0" prefWidth="194.0" text="GBH Auto Catalogue" textAlignment="CENTER" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font name="Avenir Next Regular" size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="carDropdown" layoutX="33.0" layoutY="77.0" prefWidth="150.0" />
+      <AnchorPane layoutX="24.0" layoutY="129.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="381.0" AnchorPane.topAnchor="129.0">
+         <children>
+            <Label layoutX="54.0" layoutY="60.0" text="Maximum" />
+            <TextField fx:id="minPrice" layoutY="26.0" />
+            <Label layoutX="55.0" text="Minimum" />
+            <TextField fx:id="maxPrice" layoutY="83.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="searchButton" layoutX="78.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#search" text="Search" />
+      <AnchorPane layoutX="210.0" layoutY="65.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <ListView fx:id="carList" editable="true" layoutX="20.0" onContextMenuRequested="#rightClickCar" prefHeight="200.0" prefWidth="306.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
